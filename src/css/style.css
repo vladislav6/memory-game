@@ -50,3 +50,50 @@ button:hover {
   border: 1px solid #b8ff67;
   color: #10210b;
 }
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 620px;
+  height: fit-content;
+}
+
+.flip-card {
+  width: 136px;
+  height: 136px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 10px 28px 0 rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  position: relative;
+}
+
+.flip-card-back {
+  position: absolute;
+  inset: 0;
+}
+
+@media (max-width: 550px) {
+  header {
+    flex-direction: column;
+    padding: 10px;
+  }
+}

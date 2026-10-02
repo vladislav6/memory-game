@@ -10,48 +10,48 @@ import vw from '../../assets/cards/vw.png';
 
 export const backOfCards = {
   id: 0,
-  img1: backside
+  img: backside
 };
 
 const cards = [
   {
     id: 1,
-    img1: audi,
+    img: audi,
     isHidden: true,
     isCompare: false
   }, {
     id: 2,
-    img1: bmw,
+    img: bmw,
     isHidden: true,
     isCompare: false
   }, {
     id: 3,
-    img1: ford,
+    img: ford,
     isHidden: true,
     isCompare: false
   }, {
     id: 4,
-    img1: landrover,
+    img: landrover,
     isHidden: true,
     isCompare: false
   }, {
     id: 5,
-    img1: mersedes,
+    img: mersedes,
     isHidden: true,
     isCompare: false
   }, {
     id: 6,
-    img1: porsche,
+    img: porsche,
     isHidden: true,
     isCompare: false
   }, {
     id: 7,
-    img1: toyota,
+    img: toyota,
     isHidden: true,
     isCompare: false
   }, {
     id: 8,
-    img1: vw,
+    img: vw,
     isHidden: true,
     isCompare: false
   }
