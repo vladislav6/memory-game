@@ -1,4 +1,4 @@
 import '../css/style.css';
-import cards, { backOfCards } from './cards.js';
+import './sections/render.js';
+import cards, { backOfCards } from './data/cards.js';
 
-console.log([...cards, ...cards], backOfCards);
