@@ -1,11 +1,5 @@
 import '../css/style.css';
 import './sections/render.js';
-import flipCard from './game/flip-card.js';
+import newGame from './game/new-game.js';
 
-function onPageLoad() {
-  const cards = document.querySelector('.cards');
-
-  cards?.addEventListener('click', flipCard);
-}
-
-window.addEventListener('DOMContentLoaded', onPageLoad);
+window.addEventListener('DOMContentLoaded', newGame);

@@ -1,8 +1,12 @@
 import { createMyElement } from "../common/functions";
-import cardsBlock from "./cards-block";
+import createCardsBlock from "./cards-block";
 
-const main = createMyElement('main');
+function createMain() {
+  const main = createMyElement('main');
+  const cardsBlock = createCardsBlock();
 
-main.append(cardsBlock);
+  main.append(cardsBlock);
+  return main;
+}
 
-export default main;
+export default createMain;

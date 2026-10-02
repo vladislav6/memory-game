@@ -1,6 +1,13 @@
-import header from "./header";
-import main from "./main";
+import { cleanDOM } from "../common/functions";
+import createHeader from "./header";
+import createMain from "./main";
 
-const body = document.body;
+function renderGame() {
+  const body = document.body;
+  const main = createMain();
+  const header = createHeader();
+  cleanDOM(body);
+  body.append(header, main);
+}
 
-body.append(header, main);
+export default renderGame;

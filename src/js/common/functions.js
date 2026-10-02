@@ -17,3 +17,9 @@ export function createMyElement(
 
   return myElement;
 }
+
+export function cleanDOM(parent) {
+  while (parent.firstChild) {
+    parent.firstChild.remove();
+  }
+}
