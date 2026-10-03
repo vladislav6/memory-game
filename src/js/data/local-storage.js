@@ -9,6 +9,9 @@ function setDataToLS(moves) {
 
   const formattedDate = `${day}.${month}.${year}`;
 
+  gameState.leaderboardData = gameState.leaderboardData
+    .filter(game => game.moves !== moves);
+
   gameState.setResultToTable({
     moves,
     formattedDate
