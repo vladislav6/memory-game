@@ -1,4 +1,5 @@
 import gameState from "../data/game-state";
+import victoyrModal from "./victory";
 
 function controller(cards, card, cardId) {
   const movesCount = document.querySelector('.moves-count');
@@ -25,6 +26,9 @@ function controller(cards, card, cardId) {
   gameState.selectedCards = cardId;
   movesCount.textContent = `${gameState.moves}`;
   pairsCount.textContent = `${gameState.pairs}`;
+  if (gameState.pairs === 8) {
+    victoyrModal(gameState.moves);
+  }
 }
 
 export default controller;

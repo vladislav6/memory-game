@@ -81,6 +81,7 @@ main {
   box-shadow: 0 10px 28px 0 rgba(0, 0, 0, 0.8);
   cursor: pointer;
   perspective: 1000px;
+  user-select: none;
 }
 
 .flip-card-inner {
@@ -111,10 +112,63 @@ main {
   filter: grayscale(100%);
 }
 
+.active,
 .fliped,
 .disable {
   cursor: default;
   pointer-events: none;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  width: 520px;
+  margin: 0 20px;
+  height: fit-content;
+  box-shadow: 0 24px 64px 0 rgba(0, 0, 0, 0.7);
+  background: #0d171e;
+  border: 1px solid #3d625c;
+  border-radius: 28px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title-modal {
+  font-size: 32px;
+  color: #b8ff67;
+}
+
+.result {
+  border: 1px solid rgba(184, 255, 103, 0.25);
+  border-radius: 20px;
+  padding: 24px;
+  font-size: 24px;
+  background: rgba(184, 255, 103, 0.05);
+}
+
+.btn-block {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.overlay .new-game-btn {
+  background: #b8ff67;
+  color: #10210b;
+  flex-grow: 1;
+}
+
+.overlay .close-btn {
+  flex-grow: 1;
 }
 
 @media (max-width: 550px) {
