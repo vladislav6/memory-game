@@ -23,3 +23,11 @@ export function cleanDOM(parent) {
     parent.firstChild.remove();
   }
 }
+
+export function addClassAllElements(arrayElements, classElement) {
+  return arrayElements.forEach(element => element.classList.add(...classElement));
+}
+
+export function removeClassAllElements(arrayElements, classElement) {
+  return arrayElements.forEach(element => element.classList.remove(...classElement));
+}

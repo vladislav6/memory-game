@@ -1,5 +1,7 @@
+import { addClassAllElements, removeClassAllElements } from "../common/functions";
 import gameState from "../data/game-state";
-import victoyrModal from "./victory";
+import victoryModal from "./victory";
+import setDataToLS from "../data/local-storage";
 
 function controller(cards, card, cardId) {
   const movesCount = document.querySelector('.moves-count');
@@ -9,16 +11,15 @@ function controller(cards, card, cardId) {
   if (gameState.checkPairsCards(cardId)) {
     gameState.makePair();
     gameState.makeStep();
-    gameState.flipedcards.forEach(card => card.classList.add('fliped'));
+    addClassAllElements(gameState.flipedcards, ['fliped']);
     gameState.selectedCards = '';
     gameState.flipedcards.length = 0;
   }
   if (gameState.flipedcards.length >= 2) {
     gameState.makeStep();
-    [...cards.children].forEach(card => card.classList.add('disable'));
+    addClassAllElements([...cards.children], ['disable']);
     setTimeout(() => {
-      [...cards.children].forEach(card => card.classList.remove('active'));
-      [...cards.children].forEach(card => card.classList.remove('disable'));
+      removeClassAllElements([...cards.children], ['active', 'disable']);
       gameState.selectedCards = '';
       gameState.flipedcards.length = 0;
     }, 1000);
@@ -27,7 +28,8 @@ function controller(cards, card, cardId) {
   movesCount.textContent = `${gameState.moves}`;
   pairsCount.textContent = `${gameState.pairs}`;
   if (gameState.pairs === 8) {
-    victoyrModal(gameState.moves);
+    victoryModal(gameState.moves);
+    setDataToLS(gameState.moves);
   }
 }
 

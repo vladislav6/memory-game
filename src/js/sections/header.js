@@ -1,5 +1,6 @@
 import { createMyElement } from "../common/functions"
 import newGame from "../game/new-game";
+import leaderboard from "../game/leaderboard";
 
 function createHeader() {
   const header = createMyElement('header');
@@ -11,6 +12,7 @@ function createHeader() {
   const leaderboardBtn = createMyElement('button', 'btn leaderboard-btn', '', 'Leaderboard');
 
   newGameBtn?.addEventListener('click', newGame);
+  leaderboardBtn?.addEventListener('click', leaderboard);
 
   moves.prepend(movesCount);
   pairs.prepend(pairsCount);

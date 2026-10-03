@@ -16,44 +16,28 @@ export const backOfCards = {
 const cards = [
   {
     id: 1,
-    img: audi,
-    isHidden: true,
-    isCompare: false
+    img: audi
   }, {
     id: 2,
-    img: bmw,
-    isHidden: true,
-    isCompare: false
+    img: bmw
   }, {
     id: 3,
-    img: ford,
-    isHidden: true,
-    isCompare: false
+    img: ford
   }, {
     id: 4,
-    img: landrover,
-    isHidden: true,
-    isCompare: false
+    img: landrover
   }, {
     id: 5,
-    img: mersedes,
-    isHidden: true,
-    isCompare: false
+    img: mersedes
   }, {
     id: 6,
-    img: porsche,
-    isHidden: true,
-    isCompare: false
+    img: porsche
   }, {
     id: 7,
-    img: toyota,
-    isHidden: true,
-    isCompare: false
+    img: toyota
   }, {
     id: 8,
-    img: vw,
-    isHidden: true,
-    isCompare: false
+    img: vw
   }
 ];
 
