@@ -102,8 +102,19 @@ main {
   transform: rotateY(180deg);
 }
 
-.active .flip-card-inner {
+.active .flip-card-inner,
+.fliped .flip-card-inner {
   transform: rotateY(180deg);
+}
+
+.fliped {
+  filter: grayscale(100%);
+}
+
+.fliped,
+.disable {
+  cursor: default;
+  pointer-events: none;
 }
 
 @media (max-width: 550px) {
