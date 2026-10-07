@@ -1,5 +1,6 @@
 import renderGame from "../sections/render";
 import gameState from "../data/game-state";
+import { timeoutID } from "./controller";
 
 function newGame() {
   const data = JSON.parse(localStorage.getItem('memoryGameLeaderboardData'));
@@ -10,6 +11,7 @@ function newGame() {
   gameState.leaderboardData = data ? data : [];
   renderGame();
   document.body.classList.remove('no-scroll');
+  clearTimeout(timeoutID);
 }
 
 export default newGame;

@@ -3,6 +3,7 @@ import gameState from "../data/game-state";
 import victoryModal from "./victory";
 import setDataToLS from "../data/local-storage";
 
+export let timeoutID = 0;
 function controller(cards, card, cardId) {
   const movesCount = document.querySelector('.moves-count');
   const pairsCount = document.querySelector('.pairs-count');
@@ -18,7 +19,7 @@ function controller(cards, card, cardId) {
   if (gameState.flipedcards.length >= 2) {
     gameState.makeStep();
     addClassAllElements([...cards.children], ['disable']);
-    setTimeout(() => {
+    timeoutID = setTimeout(() => {
       removeClassAllElements([...cards.children], ['active', 'disable']);
       gameState.selectedCards = '';
       gameState.flipedcards.length = 0;

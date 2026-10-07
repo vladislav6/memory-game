@@ -9,9 +9,6 @@ function setDataToLS(moves) {
 
   const formattedDate = `${day}.${month}.${year}`;
 
-  gameState.leaderboardData = gameState.leaderboardData
-    .filter(game => game.moves !== moves);
-
   gameState.setResultToTable({
     moves,
     formattedDate
@@ -19,7 +16,7 @@ function setDataToLS(moves) {
 
   const sorted = gameState
     .getResultToTable()
-    .sort((a, b) => a.moves - b.moves);
+    .sort((a, b) => a.moves - b.moves || a.formattedDate - b.formattedDate);
 
   if (sorted.length > 10) {
     sorted.length = 10;
